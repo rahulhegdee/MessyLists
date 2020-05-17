@@ -1,11 +1,11 @@
 //Creating the package.json file comes from "npm init"
 //Creating the node modules comes from " npm install express --save"
 //Express is a framework for Node.js
-var express = require('express');//this variable calls the module "express" located in node_modules
-var bodyParser = require('body-parser');//this calls the "body-parser" module located in node-modules
+const express = require('express');//this variable calls the module "express" located in node_modules
+const bodyParser = require('body-parser');//this calls the "body-parser" module located in node-modules
 //Note that require gives us access to a module. We can also require other files if we want to include those with this one.
 //If I have another file (called server.js) that I want to include, I can say require("./server.js")
-var app = express();//the module "express" is actually a function to access specific tools 
+const app = express();//the module "express" is actually a function to access specific tools 
 //app is now the object we use to build our program
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());

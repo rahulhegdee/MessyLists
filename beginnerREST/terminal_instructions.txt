@@ -1,0 +1,21 @@
+To create an API you need:
+NodeJS
+Express
+MongoDB
+PostMan
+First, go into your project directory and "npm init" to set up NodeJS
+This will create a package.json file 
+Then, "npm install express --save" to install express for the project
+Make sure you have installed mongoDB by checking "mongod --version"
+You run your project using "npm file_name"
+
+Instead of having to Ctrl+C every time we want to update our API, we can use "sudo npm install - nodemon"
+This automatically updates the API every time we make a change
+No you can run your project using "nodemon file_name" for the result
+
+To access mondoDB through the terminal, 
+open a new terminal window and type "mongod" to start a mongo server and keep the window open to use MongoDB.
+Then, in the project directory "npm install mongoose --save" and "npm install body-parser --save"
+Mongoose is the NodeJS package for modeling MongoDB 
+Body-parser allows for app to parse data from requests
+
