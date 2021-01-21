@@ -1,6 +1,6 @@
 const {MongoClient} = require('mongodb')//imports mongoDB to access atlas database
 //To get the uri you have to go to MongoDB Atlas and click connect and follow the steps
-const uri = "" //holds the connection uri to our database
+const uri = "[KEY]" //holds the connection uri to our database
 const client = new MongoClient(uri, {useNewUrlParser: true, useUnifiedTopology: true});//creates an instance of our Mongo Client
 module.exports = {//this declares that you want to expose this function for use in whatever code requires this file
     initDB: async function connector(){//creates asynchronous function called main
@@ -27,11 +27,11 @@ module.exports = {//this declares that you want to expose this function for use 
         return results;
     },
     updateDB: async function updatePerson(name, age){
-        const result = await client.db("BeginnerProject").collection("BeginnerDB").updateOne({'name':name},{'$set':{'age':age}});
+        const result = await client.db("BeginnerProject").collection("BeginnerDB").updateOne({'username':name},{'$set':{'password':password}});
         return `${result.modifiedCount}`;
     },
     deleteFromDB: async function deletePerson(name){
-        const result = await client.db("BeginnerProject").collection("BeginnerDB").deleteOne({'name':name});
+        const result = await client.db("BeginnerProject").collection("BeginnerDB").deleteOne({'username':name});
         return `${result.deletedCount}`;
     }
 };
